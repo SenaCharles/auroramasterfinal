@@ -1,0 +1,36 @@
+/* ============================================================
+   conteudos.css — estilos exclusivos da página Conteúdos
+   ============================================================ */
+
+.content-toolbar { display: flex; gap: var(--space-md); flex-wrap: wrap; align-items: center; justify-content: space-between; margin-bottom: var(--space-md); }
+.search-box { position: relative; flex: 1; min-width: 220px; max-width: 320px; }
+.search-box input {
+  width: 100%; padding: 0.6rem 1rem 0.6rem 2.2rem; border-radius: var(--radius-pill);
+  border: 1.5px solid rgba(201,164,208,0.4); font: inherit; font-size: 0.88rem; color: var(--dusk);
+}
+.search-box input:focus { outline: none; border-color: var(--rose-deep); }
+.search-box__icon { position: absolute; left: 0.8rem; top: 50%; transform: translateY(-50%); font-size: 0.9rem; color: var(--lavender-warm); }
+
+.filters { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.chip { padding: 0.4rem 1rem; border-radius: var(--radius-pill); font-size: 0.8rem; font-weight: 600; background: var(--white); color: var(--grey-text); border: 1.5px solid rgba(201, 164, 208, 0.4); transition: all 0.2s; }
+.chip:hover { border-color: var(--rose-deep); color: var(--rose-deep); }
+.chip.is-active { background: linear-gradient(135deg, var(--rose-deep), var(--plum)); color: var(--white); border-color: transparent; }
+
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: var(--space-md); }
+.content-card { background: var(--white); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-card); transition: transform 0.2s, box-shadow 0.2s; }
+.content-card__link:hover .content-card { transform: translateY(-4px); box-shadow: var(--shadow-float); }
+.content-card > .img { height: 150px; width: 100%; overflow: hidden; }
+.content-card > .img img { width: 100%; height: 100%; object-fit: cover; }
+.content-card h4, .content-card .tag, .content-card .meta { margin: 0 var(--space-sm); }
+.content-card h4 { margin-top: 0.35rem; margin-bottom: 0.25rem; }
+.content-card .meta { margin-bottom: var(--space-sm); }
+.content-card .tag { margin-top: var(--space-sm); }
+
+.empty-state { text-align: center; padding: var(--space-xl) 0; display: none; }
+.empty-state.is-visible { display: block; }
+
+@media (max-width: 480px) {
+  .card-grid { grid-template-columns: 1fr; }
+  .content-toolbar { flex-direction: column; align-items: stretch; }
+  .search-box { max-width: none; }
+}

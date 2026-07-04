@@ -1,0 +1,31 @@
+/* ============================================================
+   seguranca.css — estilos exclusivos da página Segurança
+   ============================================================ */
+
+.security-features { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-md); }
+.feature-card { background: var(--white); border-radius: var(--radius-lg); padding: var(--space-md); box-shadow: var(--shadow-card); text-align: center; transition: transform 0.2s, box-shadow 0.2s; }
+.feature-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-float); }
+.feature-card__icon { font-size: 1.8rem; margin-bottom: var(--space-xs); }
+.feature-card h4 { color: var(--plum); }
+.feature-card p { font-size: 0.88rem; }
+
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); align-items: center; }
+.security { background: linear-gradient(160deg, var(--lavender-light) 0%, var(--white) 100%); }
+.security-card { background: var(--white); border-radius: var(--radius-lg); padding: var(--space-md); box-shadow: var(--shadow-float); min-width: 240px; max-width: 340px; border: 1px solid rgba(201, 164, 208, 0.3); margin: 0 auto; }
+
+.sos-cta {
+  background: linear-gradient(135deg, #CF405F, #8B1A35); border-radius: var(--radius-lg); padding: var(--space-lg);
+  text-align: center; color: var(--white);
+}
+.sos-cta h2 { color: var(--white); }
+.sos-cta p { color: rgba(255,255,255,0.85); max-width: 50ch; margin: 0 auto var(--space-md); }
+.sos-cta .btn { background: var(--white); color: #8B1A35; }
+.sos-cta .btn:hover { background: rgba(255,255,255,0.9); }
+
+@media (max-width: 860px) {
+  .security-features { grid-template-columns: repeat(2, 1fr); }
+  .split { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .security-features { grid-template-columns: 1fr; }
+}

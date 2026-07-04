@@ -1,0 +1,43 @@
+/* ============================================================
+   parcerias.css — estilos exclusivos da página Parcerias
+   ============================================================ */
+
+.filters { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: var(--space-md); justify-content: center; }
+.chip {
+  padding: 0.4rem 1rem; border-radius: var(--radius-pill); font-size: 0.8rem; font-weight: 600;
+  background: var(--white); color: var(--grey-text); border: 1.5px solid rgba(201, 164, 208, 0.4); transition: all 0.2s;
+}
+.chip:hover { border-color: var(--rose-deep); color: var(--rose-deep); }
+.chip.is-active { background: linear-gradient(135deg, var(--rose-deep), var(--plum)); color: var(--white); border-color: transparent; }
+
+.card-grid--pros { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--space-md); }
+.pro-card {
+  background: var(--white); border-radius: var(--radius-lg); padding: var(--space-md); box-shadow: var(--shadow-card);
+  text-align: center; display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.pro-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-float); }
+.pro-card__link { display: block; color: inherit; }
+.pro-card__link:hover .pro-card { transform: translateY(-4px); box-shadow: var(--shadow-float); }
+.pro-card__avatar {
+  width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, var(--lavender-warm), var(--plum));
+  color: var(--white); font-size: 1.15rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-bottom: 0.25rem;
+}
+.pro-card h4 { margin: 0; }
+.pro-card .tag { margin-top: 0.15rem; }
+
+/* ─── COMO FUNCIONA A PARCERIA ───────────────────────────── */
+.how-it-works { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); }
+.hiw-step { background: var(--grey-soft); border-radius: var(--radius-lg); padding: var(--space-md); text-align: center; }
+.hiw-step__num {
+  width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, var(--rose-deep), var(--plum));
+  color: var(--white); font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-xs);
+}
+
+@media (max-width: 860px) {
+  .card-grid--pros { grid-template-columns: repeat(2, 1fr); }
+  .how-it-works { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .card-grid--pros { grid-template-columns: 1fr; }
+}

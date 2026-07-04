@@ -1,0 +1,57 @@
+/* ============================================================
+   como-atuamos.css — estilos exclusivos da página Como Atuamos
+   ============================================================ */
+
+/* ─── SUB-NAVEGAÇÃO INTERNA (âncoras para os 3 pilares) ──── */
+.subnav {
+  position: sticky; top: 64px; z-index: 90; background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px); border-bottom: 1px solid rgba(201,164,208,0.2);
+  padding: 0.75rem 0;
+}
+.subnav__row { display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; }
+.subnav__link {
+  font-size: 0.85rem; font-weight: 600; color: var(--grey-text); padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-pill); transition: background 0.2s, color 0.2s;
+}
+.subnav__link:hover, .subnav__link.is-active { background: var(--rose-petal); color: var(--rose-deep); }
+
+/* ─── BLOCO DE PILAR (split imagem/texto alternado) ──────── */
+.pillar-block { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); align-items: center; }
+.pillar-block--reverse .pillar-block__art { order: 2; }
+.pillar-block__art { display: flex; justify-content: center; align-items: center; }
+.pillar-block__icon {
+  font-size: 3rem; width: 140px; height: 140px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--lavender-light), var(--rose-petal));
+  display: flex; align-items: center; justify-content: center;
+}
+.pillar-block__copy .eyebrow { color: var(--rose-deep); }
+.pillar-block__copy p { max-width: 46ch; margin-bottom: var(--space-md); }
+
+/* ─── PODCASTS ──────────────────────────────────────────── */
+.podcast-layout { display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--space-lg); align-items: start; }
+.podcast-feature { display: flex; gap: var(--space-md); align-items: flex-start; background: var(--white); border-radius: var(--radius-lg); padding: var(--space-lg); box-shadow: var(--shadow-card); }
+.podcast-feature__art { font-size: 2.5rem; width: 72px; height: 72px; border-radius: var(--radius-md); background: linear-gradient(135deg, var(--lavender-light), var(--rose-petal)); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.podcast-feature h3 { font-size: 1.1rem; margin: 0.25rem 0 0.5rem; color: var(--dusk); }
+.podcast-feature__desc { font-size: 0.88rem; margin-bottom: var(--space-sm); }
+.podcast-list { list-style: none; display: flex; flex-direction: column; gap: var(--space-xs); }
+.podcast-item { display: flex; align-items: center; gap: var(--space-sm); background: var(--white); border-radius: var(--radius-md); padding: var(--space-sm) var(--space-md); box-shadow: var(--shadow-card); cursor: pointer; transition: background 0.2s; }
+.podcast-item:hover { background: var(--rose-petal); }
+.podcast-item__art { font-size: 1.4rem; width: 44px; height: 44px; border-radius: var(--radius-sm); background: var(--lavender-light); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.podcast-item strong { font-size: 0.9rem; color: var(--dusk); display: block; }
+.podcast-item .meta { margin-top: 2px; }
+
+/* ─── COMUNIDADE (avatares + CTA) ────────────────────────── */
+.avatar-stack { display: flex; position: relative; height: 160px; width: 220px; margin: 0 auto; }
+.avatar { width: 80px; height: 80px; border-radius: 50%; border: 3px solid var(--white); position: absolute; }
+.avatar.a1 { background: linear-gradient(135deg, var(--rose-deep), var(--lavender-warm)); top: 0; left: 0; }
+.avatar.a2 { background: linear-gradient(135deg, var(--plum), var(--lavender-warm)); top: 40px; left: 60px; }
+.avatar.a3 { background: linear-gradient(135deg, var(--aurora-gold), var(--rose-deep)); top: 80px; left: 120px; }
+
+/* ─── RESPONSIVO ────────────────────────────────────────── */
+@media (max-width: 860px) {
+  .pillar-block, .pillar-block--reverse .pillar-block__art { grid-template-columns: 1fr; order: -1; }
+  .pillar-block { grid-template-columns: 1fr; text-align: center; }
+  .pillar-block__copy p { margin-left: auto; margin-right: auto; }
+  .podcast-layout { grid-template-columns: 1fr; }
+  .subnav__row { gap: 0.4rem; }
+}

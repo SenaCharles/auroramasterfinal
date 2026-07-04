@@ -1,0 +1,101 @@
+/* ============================================================
+   perfil-usuario.css — estilos exclusivos da página Meu Perfil
+   (depende de base.css, que já traz header/footer/botões)
+   ============================================================ */
+
+.profile-layout {
+  display: grid; grid-template-columns: 320px 1fr; gap: var(--space-xl); align-items: start;
+}
+
+/* ─── CARTÃO DE FOTO ──────────────────────────────────────── */
+.photo-card {
+  background: var(--white); border-radius: var(--radius-lg); padding: var(--space-lg);
+  box-shadow: var(--shadow-card); text-align: center; position: sticky; top: 84px;
+}
+.photo-frame {
+  position: relative; width: 140px; height: 140px; margin: 0 auto var(--space-md);
+}
+.photo-frame__preview {
+  width: 100%; height: 100%; border-radius: 50%; object-fit: cover;
+  background: linear-gradient(135deg, var(--lavender-warm), var(--plum));
+  display: flex; align-items: center; justify-content: center;
+  color: var(--white); font-family: var(--font-display); font-size: 2.4rem; font-weight: 700;
+  border: 4px solid var(--white); box-shadow: var(--shadow-float);
+}
+.photo-frame__preview img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: none; }
+.photo-frame__preview.has-photo span { display: none; }
+.photo-frame__preview.has-photo img { display: block; }
+.photo-frame__edit {
+  position: absolute; bottom: 4px; right: 4px; width: 38px; height: 38px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--rose-deep), var(--plum)); color: var(--white);
+  display: flex; align-items: center; justify-content: center; font-size: 1rem;
+  box-shadow: var(--shadow-glow); transition: transform 0.2s var(--ease); cursor: pointer;
+  border: 3px solid var(--white);
+}
+.photo-frame__edit:hover { transform: scale(1.1); }
+.photo-frame input[type="file"] { display: none; }
+
+.photo-card h3 { font-size: 1.1rem; margin-bottom: 0.15rem; }
+.photo-card .meta { margin-bottom: var(--space-sm); }
+.photo-card__remove { font-size: 0.8rem; color: var(--rose-deep); font-weight: 600; }
+.photo-card__remove:hover { text-decoration: underline; }
+.photo-card__hint { font-size: 0.76rem; color: var(--lavender-warm); margin-top: var(--space-sm); }
+
+.photo-card__divider { border: none; border-top: 1px solid var(--grey-soft); margin: var(--space-md) 0; }
+
+.privacy-toggle { display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0; font-size: 0.85rem; color: var(--dusk); }
+
+/* ─── FORMULÁRIO DE INFORMAÇÕES ──────────────────────────── */
+.form-card {
+  background: var(--white); border-radius: var(--radius-lg); padding: var(--space-lg);
+  box-shadow: var(--shadow-card); margin-bottom: var(--space-md);
+}
+.form-card h2 { font-size: 1.15rem; border-left: 3px solid var(--rose-deep); padding-left: var(--space-sm); margin-bottom: var(--space-md); }
+.form-card p.form-card__desc { font-size: 0.88rem; margin-bottom: var(--space-md); margin-top: -0.5rem; }
+
+.field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); }
+.field-grid .field--full { grid-column: 1 / -1; }
+
+.field { margin-bottom: var(--space-md); }
+.field label { display: block; font-size: 0.82rem; font-weight: 700; color: var(--dusk); margin-bottom: 0.35rem; }
+.field input, .field select, .field textarea {
+  width: 100%; padding: 0.7rem 0.9rem; border-radius: var(--radius-sm); border: 1.5px solid rgba(201,164,208,0.4);
+  font: inherit; font-size: 0.92rem; color: var(--dusk); background: var(--white); resize: vertical;
+  transition: border-color 0.2s;
+}
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--rose-deep); }
+.field .char-count { font-size: 0.75rem; color: var(--lavender-warm); text-align: right; margin-top: 0.25rem; }
+.field-error { color: #BF4F68; font-size: 0.78rem; margin-top: 0.3rem; display: none; }
+.field.has-error input, .field.has-error textarea { border-color: #BF4F68; }
+.field.has-error .field-error { display: block; }
+
+.form-actions { display: flex; justify-content: flex-end; gap: var(--space-sm); flex-wrap: wrap; }
+
+.save-success {
+  display: none; align-items: center; gap: 0.5rem; background: #E0F5F1; color: #2E7B6F; font-size: 0.85rem;
+  padding: 0.7rem 1rem; border-radius: var(--radius-md); font-weight: 600; margin-bottom: var(--space-md);
+}
+.save-success.is-visible { display: flex; }
+
+/* ─── LINKS RÁPIDOS (segurança / rede de confiança) ──────── */
+.quick-links { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); }
+.quick-link {
+  display: flex; align-items: center; gap: 0.7rem; background: var(--grey-soft); border-radius: var(--radius-md);
+  padding: var(--space-sm) var(--space-md); transition: background 0.2s, transform 0.2s;
+}
+.quick-link:hover { background: var(--rose-petal); transform: translateY(-2px); }
+.quick-link__icon { font-size: 1.3rem; }
+.quick-link strong { display: block; font-size: 0.88rem; color: var(--dusk); }
+.quick-link span.meta { display: block; margin-top: 0.1rem; }
+
+.danger-zone { border: 1.5px dashed rgba(207, 64, 95, 0.35); border-radius: var(--radius-lg); padding: var(--space-md); }
+.danger-zone h2 { border-left-color: #CF405F; }
+.danger-zone p { font-size: 0.88rem; margin-bottom: var(--space-sm); }
+
+/* ─── RESPONSIVO ────────────────────────────────────────── */
+@media (max-width: 860px) {
+  .profile-layout { grid-template-columns: 1fr; }
+  .photo-card { position: static; }
+  .field-grid { grid-template-columns: 1fr; }
+  .quick-links { grid-template-columns: 1fr; }
+}

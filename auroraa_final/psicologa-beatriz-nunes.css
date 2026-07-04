@@ -1,0 +1,50 @@
+/* ============================================================
+   psicologa-beatriz-nunes.css — estilos exclusivos da página de perfil de Beatriz Nunes
+   (depende de base.css, que já traz header/footer/botões)
+   ============================================================ */
+
+.profile-hero { background: linear-gradient(160deg, var(--rose-light) 0%, var(--lavender-light) 55%, var(--white) 100%); padding: var(--space-lg) 0 var(--space-xl); }
+.profile-head { display: flex; align-items: center; gap: var(--space-md); flex-wrap: wrap; }
+.profile-avatar {
+  width: 96px; height: 96px; border-radius: 50%; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--lavender-warm), var(--plum)); color: var(--white);
+  font-family: var(--font-display); font-size: 1.8rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.profile-head__info h1 { font-size: clamp(1.5rem, 4vw, 2rem); margin-bottom: 0.2rem; }
+.profile-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.5rem; }
+
+.profile-layout { display: grid; grid-template-columns: 2fr 1fr; gap: var(--space-xl); align-items: start; }
+.profile-main section { margin-bottom: var(--space-lg); }
+.profile-main h2 { font-size: 1.2rem; border-left: 3px solid var(--rose-deep); padding-left: var(--space-sm); }
+.profile-main ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+.profile-main ul li { padding-left: 1.1rem; position: relative; font-size: 0.95rem; color: var(--dusk-mid); }
+.profile-main ul li::before { content: ''; position: absolute; left: 0; top: 0.55em; width: 6px; height: 6px; border-radius: 50%; background: var(--rose-deep); }
+
+/* ─── CARD LATERAL: solicitar conversa ───────────────────── */
+.booking-card {
+  background: var(--white); border-radius: var(--radius-lg); padding: var(--space-md);
+  box-shadow: var(--shadow-float); border: 1px solid rgba(201,164,208,0.3); position: sticky; top: 84px;
+}
+.booking-card h3 { font-size: 1rem; margin-bottom: var(--space-xs); }
+.booking-card .field { margin-bottom: var(--space-sm); }
+.booking-card label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--dusk); margin-bottom: 0.3rem; }
+.booking-card input, .booking-card textarea {
+  width: 100%; padding: 0.6rem 0.8rem; border-radius: var(--radius-sm); border: 1.5px solid rgba(201,164,208,0.4);
+  font: inherit; font-size: 0.88rem; color: var(--dusk); resize: vertical;
+}
+.booking-card input:focus, .booking-card textarea:focus { outline: none; border-color: var(--rose-deep); }
+.booking-card .field-error { color: #BF4F68; font-size: 0.78rem; margin-top: 0.25rem; display: none; }
+.booking-card .field.has-error input,
+.booking-card .field.has-error textarea { border-color: #BF4F68; }
+.booking-card .field.has-error .field-error { display: block; }
+.booking-success {
+  display: none; background: #E0F5F1; color: #2E7B6F; font-size: 0.85rem; padding: 0.7rem 1rem;
+  border-radius: var(--radius-md); margin-top: var(--space-sm); font-weight: 600; text-align: center;
+}
+.booking-success.is-visible { display: block; }
+
+@media (max-width: 860px) {
+  .profile-layout { grid-template-columns: 1fr; }
+  .booking-card { position: static; }
+}

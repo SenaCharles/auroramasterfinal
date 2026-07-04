@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beatriz Nunes — Perfil | Aurora</title>
+  <meta name="description" content="Conheça o perfil de Beatriz Nunes, CRP 06/45678, psicóloga parceira do Aurora especializada em trauma e ansiedade.">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="psicologa-beatriz-nunes.css">
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container header__row">
+      <a href="index.html" class="logo">Aurora</a>
+
+      <nav class="nav" id="mainNav" aria-label="Navegação principal">
+        <a href="index.html" class="nav__link">Início</a>
+        <a href="quemS.html" class="nav__link">Quem Somos</a>
+        <a href="comoAtu.html" class="nav__link">Como Atuamos</a>
+        <a href="conteudos.html" class="nav__link">Conteúdos</a>
+        <a href="parcerias.html" class="nav__link is-active">Parcerias</a>
+        <a href="segu.html" class="nav__link">Segurança</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="icon-btn" id="discreteBtn" title="Saída rápida / modo discreto" aria-label="Saída rápida">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M9 12h12m0 0-4-4m4 4-4 4M9 4H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h4" stroke="currentColor"
+              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+        </button>
+        <button class="avatar-btn" id="profileBtn" title="Perfil" aria-label="Abrir perfil">
+          <span>JM</span>
+        </button>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="drawer" id="drawer">
+    <a href="index.html" class="drawer__link">Início</a>
+    <a href="quemS.html" class="drawer__link">Quem Somos</a>
+    <a href="comoAtu.html" class="drawer__link">Como Atuamos</a>
+    <a href="conteudos.html" class="drawer__link">Conteúdos</a>
+    <a href="parcerias.html" class="drawer__link is-active">Parcerias</a>
+    <a href="segu.html" class="drawer__link">Segurança</a>
+  </div>
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <main>
+  <section class="profile-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="parcerias.html">Parcerias</a> / Beatriz Nunes</p>
+      <div class="profile-head">
+        <div class="profile-avatar">BN</div>
+        <div class="profile-head__info">
+          <h1>Beatriz Nunes</h1>
+          <p class="meta">CRP 06/45678</p>
+          <div class="profile-tags">
+            <span class="tag tag--abuso">Trauma e ansiedade</span>
+            <span class="badge badge--ok">Valor acessível</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="profile-layout">
+        <div class="profile-main">
+          <section>
+            <h2>Sobre</h2>
+            <p>Beatriz atende pessoas em momentos de crise e transição, com experiência em situações de violência doméstica e psicológica. Seu trabalho é pautado pela segurança emocional e sigilo absoluto.</p>
+          </section>
+          <section>
+            <h2>Abordagem</h2>
+            <ul>
+          <li>Terapia breve focada em crise</li>
+          <li>Psicoeducação sobre ciclos de abuso</li>
+          <li>Rede de encaminhamento para apoio jurídico e social</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Áreas de atuação</h2>
+            <ul>
+          <li>Situações de risco e planejamento de segurança</li>
+          <li>Ansiedade generalizada e crises de pânico</li>
+          <li>Apoio em processos de saída de relações abusivas</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Disponibilidade</h2>
+            <p>Atendimento online com horários de emergência. Prioridade para casos de maior vulnerabilidade.</p>
+          </section>
+        </div>
+
+        <aside class="booking-card">
+          <h3>Solicitar primeira conversa</h3>
+          <p class="meta" style="margin-bottom:var(--space-sm)">Resposta em até 2 dias úteis.</p>
+          <form id="bookingForm" novalidate>
+            <div class="field">
+              <label for="bookingName">Nome</label>
+              <input type="text" id="bookingName" name="name" placeholder="Seu nome">
+              <span class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="bookingEmail">E-mail</label>
+              <input type="email" id="bookingEmail" name="email" placeholder="voce@email.com">
+              <span class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="bookingMessage">Mensagem</label>
+              <textarea id="bookingMessage" name="message" rows="4" placeholder="Conte brevemente o que te trouxe até aqui..."></textarea>
+              <span class="field-error"></span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block">Enviar solicitação</button>
+          </form>
+          <div class="booking-success" id="bookingSuccess">✓ Solicitação enviada! Beatriz entrará em contato em breve.</div>
+        </aside>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="logo logo--footer">Aurora</p>
+          <p>Educação emocional, comunidade e apoio psicológico acessível — para reconhecer padrões, fortalecer autonomia e recomeçar com segurança.</p>
+        </div>
+        <div>
+          <h5>Navegação</h5>
+          <ul class="footer__links">
+            <li><a href="quemS.html">Quem Somos</a></li>
+            <li><a href="comoAtu.html">Como Atuamos</a></li>
+            <li><a href="conteudos.html">Conteúdos</a></li>
+            <li><a href="parcerias.html">Parcerias</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Legal &amp; Segurança</h5>
+          <ul class="footer__links">
+            <li><a href="segu.html">Central de Segurança</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Termos de Uso</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="meta">© 2026 Aurora. Plataforma em conformidade com a LGPD.</p>
+        <p class="meta">Feito com cuidado, para você.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="fab" id="securityFab" aria-label="Abrir segurança / SOS">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5l-8-3Z" stroke="currentColor" stroke-width="1.8"
+        stroke-linejoin="round" /></svg>
+  </button>
+
+  <div class="modal-overlay" id="sosOverlay">
+    <div class="modal sos-modal" role="dialog" aria-modal="true" aria-label="Segurança e emergência">
+      <button class="modal__close" id="sosClose" aria-label="Fechar">✕</button>
+      <h3>Segurança</h3>
+      <p class="meta">Você está em um espaço seguro. Use as opções abaixo se precisar de ajuda agora.</p>
+      <button class="btn btn--sos" id="sosTrigger">🆘 Avisar Rede de Confiança</button>
+      <button class="btn btn--outline">Ligar para autoridade</button>
+      <div class="sos-feedback" id="sosFeedback" hidden>✓ Sua localização foi enviada para sua Rede de Confiança.</div>
+      <hr>
+      <div class="security-row">
+        <span>Modo discreto</span>
+        <label class="toggle"><input type="checkbox" checked><span class="toggle__track"></span></label>
+      </div>
+    </div>
+  </div>
+
+  <nav class="bottom-nav" aria-label="Navegação mobile">
+    <a href="index.html" class="bottom-nav__item"><span class="bn-icon">⌂</span><span>Início</span></a>
+    <a href="conteudos.html" class="bottom-nav__item"><span class="bn-icon">📘</span><span>Conteúdos</span></a>
+    <a href="parcerias.html" class="bottom-nav__item is-active"><span class="bn-icon">🤝</span><span>Parcerias</span></a>
+    <a href="segu.html" class="bottom-nav__item"><span class="bn-icon">🛡</span><span>Segurança</span></a>
+  </nav>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/common.js"></script>
+  <script src="js/perfil.js"></script>
+
+</body>
+</html>
