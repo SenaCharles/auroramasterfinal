@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Conteúdos em destaque — Aurora</title>
-  <meta name="description" content="Biblioteca de conteúdos do Aurora sobre sinais de relacionamento desigual, abuso psicológico, relações saudáveis e consentimento.">
+  <meta name="description"
+    content="Biblioteca de conteúdos do Aurora sobre sinais de relacionamento desigual, abuso psicológico, relações saudáveis e consentimento.">
   <link rel="stylesheet" href="base.css">
-  <link rel="stylesheet" href="conteudos.css">
+  <link rel="stylesheet" href="NovoEstilo.css">
 </head>
+
 <body>
 
   <header class="header" id="header">
@@ -50,70 +53,70 @@
   <div class="drawer-overlay" id="drawerOverlay"></div>
 
   <main>
-  <section class="page-hero">
-    <div class="container">
-      <h1>Conteúdos em destaque</h1>
-      <p>Textos curtos e diretos, revisados por psicólogos, para ajudar você a reconhecer padrões
-        e entender melhor suas relações.</p>
-    </div>
-  </section>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Conteúdos em destaque</h1>
+        <p>Textos curtos e diretos, revisados por psicólogos, para ajudar você a reconhecer padrões
+          e entender melhor suas relações.</p>
+      </div>
+    </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="content-toolbar">
-        <div class="filters" role="tablist" aria-label="Filtrar conteúdos">
-          <button class="chip is-active" data-filter="todos">Todos</button>
-          <button class="chip" data-filter="emocional">Emocional</button>
-          <button class="chip" data-filter="abuso">Sinais de abuso</button>
-          <button class="chip" data-filter="relacionamentos">Relacionamentos</button>
-          <button class="chip" data-filter="sexual">Educação sexual</button>
+    <section class="section">
+      <div class="container">
+        <div class="content-toolbar">
+          <div class="filters" role="tablist" aria-label="Filtrar conteúdos">
+            <button class="chip is-active" data-filter="todos">Todos</button>
+            <button class="chip" data-filter="emocional">Emocional</button>
+            <button class="chip" data-filter="abuso">Sinais de abuso</button>
+            <button class="chip" data-filter="relacionamentos">Relacionamentos</button>
+            <button class="chip" data-filter="sexual">Educação sexual</button>
+          </div>
+          <div class="search-box">
+            <span class="search-box__icon">🔍</span>
+            <input type="text" id="contentSearch" placeholder="Buscar por título...">
+          </div>
         </div>
-        <div class="search-box">
-          <span class="search-box__icon">🔍</span>
-          <input type="text" id="contentSearch" placeholder="Buscar por título...">
+
+        <div class="card-grid" id="contentGrid">
+          <a href="emocional.html" class="content-card__link" data-category="emocional">
+            <article class="content-card">
+              <div class="img"><img src="img/seinais_abuso.png" alt="Mulher pensativa sentada em uma escadaria"></div>
+              <span class="tag tag--emo">Emocional</span>
+              <h4>Os primeiros sinais de um relacionamento desigual</h4>
+              <p class="meta">6 min de leitura</p>
+            </article>
+          </a>
+          <a href="abuso-psicologico.html" class="content-card__link" data-category="abuso">
+            <article class="content-card">
+              <div class="img"><img src="img/Abuso_psi.jpg" alt="Mulher séria olhando para o horizonte"></div>
+              <span class="tag tag--abuso">Sinais de abuso</span>
+              <h4>Abuso psicológico: o que muitas vezes passa despercebido</h4>
+              <p class="meta">8 min de leitura</p>
+            </article>
+          </a>
+          <a href="relacionamento-saudavel.html" class="content-card__link" data-category="relacionamentos">
+            <article class="content-card">
+              <div class="img"><img src="img/relacao_saud.jpg" alt="Mulher tranquila observando o pôr do sol"></div>
+              <span class="tag tag--rel">Relacionamentos</span>
+              <h4>Como construir confiança em uma relação saudável</h4>
+              <p class="meta">5 min de leitura</p>
+            </article>
+          </a>
+          <a href="consentimento.html" class="content-card__link" data-category="sexual">
+            <article class="content-card">
+              <div class="img"><img src="img/conversar_sobre.webp" alt="Casal dialogando de forma aberta"></div>
+              <span class="tag tag--sex">Educação sexual</span>
+              <h4>Consentimento: por que conversar sobre isso importa</h4>
+              <p class="meta">4 min de leitura</p>
+            </article>
+          </a>
+        </div>
+
+        <div class="empty-state" id="emptyState">
+          <p>Nenhum conteúdo encontrado para essa busca.</p>
         </div>
       </div>
-
-      <div class="card-grid" id="contentGrid">
-        <a href="emocional.html" class="content-card__link" data-category="emocional">
-          <article class="content-card">
-            <div class="img"><img src="img/seinais_abuso.png" alt="Mulher pensativa sentada em uma escadaria"></div>
-            <span class="tag tag--emo">Emocional</span>
-            <h4>Os primeiros sinais de um relacionamento desigual</h4>
-            <p class="meta">6 min de leitura</p>
-          </article>
-        </a>
-        <a href="abuso-psicologico.html" class="content-card__link" data-category="abuso">
-          <article class="content-card">
-            <div class="img"><img src="img/Abuso_psi.jpg" alt="Mulher séria olhando para o horizonte"></div>
-            <span class="tag tag--abuso">Sinais de abuso</span>
-            <h4>Abuso psicológico: o que muitas vezes passa despercebido</h4>
-            <p class="meta">8 min de leitura</p>
-          </article>
-        </a>
-        <a href="relacionamento-saudavel.html" class="content-card__link" data-category="relacionamentos">
-          <article class="content-card">
-            <div class="img"><img src="img/relacao_saud.jpg" alt="Mulher tranquila observando o pôr do sol"></div>
-            <span class="tag tag--rel">Relacionamentos</span>
-            <h4>Como construir confiança em uma relação saudável</h4>
-            <p class="meta">5 min de leitura</p>
-          </article>
-        </a>
-        <a href="consentimento.html" class="content-card__link" data-category="sexual">
-          <article class="content-card">
-            <div class="img"><img src="img/conversar_sobre.webp" alt="Casal dialogando de forma aberta"></div>
-            <span class="tag tag--sex">Educação sexual</span>
-            <h4>Consentimento: por que conversar sobre isso importa</h4>
-            <p class="meta">4 min de leitura</p>
-          </article>
-        </a>
-      </div>
-
-      <div class="empty-state" id="emptyState">
-        <p>Nenhum conteúdo encontrado para essa busca.</p>
-      </div>
-    </div>
-  </section>
+    </section>
   </main>
 
   <footer class="footer">
@@ -121,7 +124,8 @@
       <div class="footer__grid">
         <div>
           <p class="logo logo--footer">Aurora</p>
-          <p>Educação emocional, comunidade e apoio psicológico acessível — para reconhecer padrões, fortalecer autonomia e recomeçar com segurança.</p>
+          <p>Educação emocional, comunidade e apoio psicológico acessível — para reconhecer padrões, fortalecer
+            autonomia e recomeçar com segurança.</p>
         </div>
         <div>
           <h5>Navegação</h5>
@@ -173,7 +177,8 @@
 
   <nav class="bottom-nav" aria-label="Navegação mobile">
     <a href="index.html" class="bottom-nav__item"><span class="bn-icon">⌂</span><span>Início</span></a>
-    <a href="conteudos.html" class="bottom-nav__item is-active"><span class="bn-icon">📘</span><span>Conteúdos</span></a>
+    <a href="conteudos.html" class="bottom-nav__item is-active"><span
+        class="bn-icon">📘</span><span>Conteúdos</span></a>
     <a href="parcerias.html" class="bottom-nav__item"><span class="bn-icon">🤝</span><span>Parcerias</span></a>
     <a href="segu.html" class="bottom-nav__item"><span class="bn-icon">🛡</span><span>Segurança</span></a>
   </nav>
@@ -184,4 +189,5 @@
   <script src="js/conteudos.js"></script>
 
 </body>
+
 </html>
