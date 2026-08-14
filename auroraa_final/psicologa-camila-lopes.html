@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Camila Lopes — Perfil | Aurora</title>
-  <meta name="description" content="Conheça o perfil de Camila Lopes, CRP 06/98765, psicóloga parceira do Aurora especializada em autoestima.">
+  <meta name="description"
+    content="Conheça o perfil de Camila Lopes, CRP 06/98765, psicóloga parceira do Aurora especializada em autoestima.">
   <link rel="stylesheet" href="base.css">
-  <link rel="stylesheet" href="psicologa-camila-lopes.css">
+  <link rel="stylesheet" href="NovoEstilo.css">
 </head>
+
 <body>
 
   <header class="header" id="header">
@@ -50,79 +53,83 @@
   <div class="drawer-overlay" id="drawerOverlay"></div>
 
   <main>
-  <section class="profile-hero">
-    <div class="container">
-      <p class="breadcrumb"><a href="parcerias.html">Parcerias</a> / Camila Lopes</p>
-      <div class="profile-head">
-        <div class="profile-avatar">CL</div>
-        <div class="profile-head__info">
-          <h1>Camila Lopes</h1>
-          <p class="meta">CRP 06/98765</p>
-          <div class="profile-tags">
-            <span class="tag tag--emo">Autoestima</span>
-            <span class="badge badge--ok">Valor acessível</span>
+    <section class="profile-hero">
+      <div class="container">
+        <p class="breadcrumb"><a href="parcerias.html">Parcerias</a> / Camila Lopes</p>
+        <div class="profile-head">
+          <div class="profile-avatar">CL</div>
+          <div class="profile-head__info">
+            <h1>Camila Lopes</h1>
+            <p class="meta">CRP 06/98765</p>
+            <div class="profile-tags">
+              <span class="tag tag--emo">Autoestima</span>
+              <span class="badge badge--ok">Valor acessível</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="profile-layout">
-        <div class="profile-main">
-          <section>
-            <h2>Sobre</h2>
-            <p>Camila trabalha o fortalecimento da autoestima e da identidade pessoal, especialmente após vivências de desvalorização em relacionamentos. Acredita que reconstruir a relação consigo mesma é o primeiro passo.</p>
-          </section>
-          <section>
-            <h2>Abordagem</h2>
-            <ul>
-          <li>Terapia humanista centrada na pessoa</li>
-          <li>Exercícios práticos de autoconhecimento</li>
-          <li>Foco em autocompaixão</li>
-            </ul>
-          </section>
-          <section>
-            <h2>Áreas de atuação</h2>
-            <ul>
-          <li>Autoestima e autoimagem</li>
-          <li>Recomeços após relações desgastantes</li>
-          <li>Estabelecimento de limites saudáveis</li>
-            </ul>
-          </section>
-          <section>
-            <h2>Disponibilidade</h2>
-            <p>Atendimento online, quarta a sábado. Valores sociais conforme faixa de renda.</p>
-          </section>
+    <section class="section">
+      <div class="container">
+        <div class="profile-layout">
+          <div class="profile-main">
+            <section>
+              <h2>Sobre</h2>
+              <p>Camila trabalha o fortalecimento da autoestima e da identidade pessoal, especialmente após vivências de
+                desvalorização em relacionamentos. Acredita que reconstruir a relação consigo mesma é o primeiro passo.
+              </p>
+            </section>
+            <section>
+              <h2>Abordagem</h2>
+              <ul>
+                <li>Terapia humanista centrada na pessoa</li>
+                <li>Exercícios práticos de autoconhecimento</li>
+                <li>Foco em autocompaixão</li>
+              </ul>
+            </section>
+            <section>
+              <h2>Áreas de atuação</h2>
+              <ul>
+                <li>Autoestima e autoimagem</li>
+                <li>Recomeços após relações desgastantes</li>
+                <li>Estabelecimento de limites saudáveis</li>
+              </ul>
+            </section>
+            <section>
+              <h2>Disponibilidade</h2>
+              <p>Atendimento online, quarta a sábado. Valores sociais conforme faixa de renda.</p>
+            </section>
+          </div>
+
+          <aside class="booking-card">
+            <h3>Solicitar primeira conversa</h3>
+            <p class="meta" style="margin-bottom:var(--space-sm)">Resposta em até 2 dias úteis.</p>
+            <form id="bookingForm" novalidate>
+              <div class="field">
+                <label for="bookingName">Nome</label>
+                <input type="text" id="bookingName" name="name" placeholder="Seu nome">
+                <span class="field-error"></span>
+              </div>
+              <div class="field">
+                <label for="bookingEmail">E-mail</label>
+                <input type="email" id="bookingEmail" name="email" placeholder="voce@email.com">
+                <span class="field-error"></span>
+              </div>
+              <div class="field">
+                <label for="bookingMessage">Mensagem</label>
+                <textarea id="bookingMessage" name="message" rows="4"
+                  placeholder="Conte brevemente o que te trouxe até aqui..."></textarea>
+                <span class="field-error"></span>
+              </div>
+              <button type="submit" class="btn btn--primary btn--block">Enviar solicitação</button>
+            </form>
+            <div class="booking-success" id="bookingSuccess">✓ Solicitação enviada! Camila entrará em contato em breve.
+            </div>
+          </aside>
         </div>
-
-        <aside class="booking-card">
-          <h3>Solicitar primeira conversa</h3>
-          <p class="meta" style="margin-bottom:var(--space-sm)">Resposta em até 2 dias úteis.</p>
-          <form id="bookingForm" novalidate>
-            <div class="field">
-              <label for="bookingName">Nome</label>
-              <input type="text" id="bookingName" name="name" placeholder="Seu nome">
-              <span class="field-error"></span>
-            </div>
-            <div class="field">
-              <label for="bookingEmail">E-mail</label>
-              <input type="email" id="bookingEmail" name="email" placeholder="voce@email.com">
-              <span class="field-error"></span>
-            </div>
-            <div class="field">
-              <label for="bookingMessage">Mensagem</label>
-              <textarea id="bookingMessage" name="message" rows="4" placeholder="Conte brevemente o que te trouxe até aqui..."></textarea>
-              <span class="field-error"></span>
-            </div>
-            <button type="submit" class="btn btn--primary btn--block">Enviar solicitação</button>
-          </form>
-          <div class="booking-success" id="bookingSuccess">✓ Solicitação enviada! Camila entrará em contato em breve.</div>
-        </aside>
       </div>
-    </div>
-  </section>
+    </section>
   </main>
 
   <footer class="footer">
@@ -130,7 +137,8 @@
       <div class="footer__grid">
         <div>
           <p class="logo logo--footer">Aurora</p>
-          <p>Educação emocional, comunidade e apoio psicológico acessível — para reconhecer padrões, fortalecer autonomia e recomeçar com segurança.</p>
+          <p>Educação emocional, comunidade e apoio psicológico acessível — para reconhecer padrões, fortalecer
+            autonomia e recomeçar com segurança.</p>
         </div>
         <div>
           <h5>Navegação</h5>
@@ -183,14 +191,15 @@
   <nav class="bottom-nav" aria-label="Navegação mobile">
     <a href="index.html" class="bottom-nav__item"><span class="bn-icon">⌂</span><span>Início</span></a>
     <a href="conteudos.html" class="bottom-nav__item"><span class="bn-icon">📘</span><span>Conteúdos</span></a>
-    <a href="parcerias.html" class="bottom-nav__item is-active"><span class="bn-icon">🤝</span><span>Parcerias</span></a>
+    <a href="parcerias.html" class="bottom-nav__item is-active"><span
+        class="bn-icon">🤝</span><span>Parcerias</span></a>
     <a href="segu.html" class="bottom-nav__item"><span class="bn-icon">🛡</span><span>Segurança</span></a>
   </nav>
 
   <div class="toast" id="toast"></div>
 
-  <script src="js/common.js"></script>
-  <script src="js/perfil.js"></script>
+  <script src="js/Novo.js"></script>
 
 </body>
+
 </html>

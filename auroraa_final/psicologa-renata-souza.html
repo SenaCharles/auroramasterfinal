@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Renata Souza — Perfil | Aurora</title>
-  <meta name="description" content="Conheça o perfil de Renata Souza, CRP 06/54321, psicóloga parceira do Aurora especializada em trauma e ansiedade.">
+  <meta name="description"
+    content="Conheça o perfil de Renata Souza, CRP 06/54321, psicóloga parceira do Aurora especializada em trauma e ansiedade.">
   <link rel="stylesheet" href="base.css">
-  <link rel="stylesheet" href="psicologa-renata-souza.css">
+  <link rel="stylesheet" href="NovoEstilo.css">
 </head>
+
 <body>
 
   <header class="header" id="header">
@@ -50,79 +53,82 @@
   <div class="drawer-overlay" id="drawerOverlay"></div>
 
   <main>
-  <section class="profile-hero">
-    <div class="container">
-      <p class="breadcrumb"><a href="parcerias.html">Parcerias</a> / Renata Souza</p>
-      <div class="profile-head">
-        <div class="profile-avatar">RS</div>
-        <div class="profile-head__info">
-          <h1>Renata Souza</h1>
-          <p class="meta">CRP 06/54321</p>
-          <div class="profile-tags">
-            <span class="tag tag--abuso">Trauma e ansiedade</span>
-            <span class="badge badge--ok">Valor acessível</span>
+    <section class="profile-hero">
+      <div class="container">
+        <p class="breadcrumb"><a href="parcerias.html">Parcerias</a> / Renata Souza</p>
+        <div class="profile-head">
+          <div class="profile-avatar">RS</div>
+          <div class="profile-head__info">
+            <h1>Renata Souza</h1>
+            <p class="meta">CRP 06/54321</p>
+            <div class="profile-tags">
+              <span class="tag tag--abuso">Trauma e ansiedade</span>
+              <span class="badge badge--ok">Valor acessível</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="profile-layout">
-        <div class="profile-main">
-          <section>
-            <h2>Sobre</h2>
-            <p>Renata é especialista em trauma e ansiedade, com formação em abordagens somáticas. Seu trabalho foca em ajudar pessoas a processar experiências difíceis em um ritmo seguro e respeitoso.</p>
-          </section>
-          <section>
-            <h2>Abordagem</h2>
-            <ul>
-          <li>Terapia sensoriomotora e regulação emocional</li>
-          <li>EMDR para processamento de traumas</li>
-          <li>Abordagem gradual, sem pressa</li>
-            </ul>
-          </section>
-          <section>
-            <h2>Áreas de atuação</h2>
-            <ul>
-          <li>Sintomas de ansiedade e hipervigilância</li>
-          <li>Traumas relacionados a abuso psicológico e controle</li>
-          <li>Recuperação da sensação de segurança no corpo</li>
-            </ul>
-          </section>
-          <section>
-            <h2>Disponibilidade</h2>
-            <p>Atendimento online, terças e quintas. Lista de espera para sessões sem custo.</p>
-          </section>
+    <section class="section">
+      <div class="container">
+        <div class="profile-layout">
+          <div class="profile-main">
+            <section>
+              <h2>Sobre</h2>
+              <p>Renata é especialista em trauma e ansiedade, com formação em abordagens somáticas. Seu trabalho foca em
+                ajudar pessoas a processar experiências difíceis em um ritmo seguro e respeitoso.</p>
+            </section>
+            <section>
+              <h2>Abordagem</h2>
+              <ul>
+                <li>Terapia sensoriomotora e regulação emocional</li>
+                <li>EMDR para processamento de traumas</li>
+                <li>Abordagem gradual, sem pressa</li>
+              </ul>
+            </section>
+            <section>
+              <h2>Áreas de atuação</h2>
+              <ul>
+                <li>Sintomas de ansiedade e hipervigilância</li>
+                <li>Traumas relacionados a abuso psicológico e controle</li>
+                <li>Recuperação da sensação de segurança no corpo</li>
+              </ul>
+            </section>
+            <section>
+              <h2>Disponibilidade</h2>
+              <p>Atendimento online, terças e quintas. Lista de espera para sessões sem custo.</p>
+            </section>
+          </div>
+
+          <aside class="booking-card">
+            <h3>Solicitar primeira conversa</h3>
+            <p class="meta" style="margin-bottom:var(--space-sm)">Resposta em até 2 dias úteis.</p>
+            <form id="bookingForm" novalidate>
+              <div class="field">
+                <label for="bookingName">Nome</label>
+                <input type="text" id="bookingName" name="name" placeholder="Seu nome">
+                <span class="field-error"></span>
+              </div>
+              <div class="field">
+                <label for="bookingEmail">E-mail</label>
+                <input type="email" id="bookingEmail" name="email" placeholder="voce@email.com">
+                <span class="field-error"></span>
+              </div>
+              <div class="field">
+                <label for="bookingMessage">Mensagem</label>
+                <textarea id="bookingMessage" name="message" rows="4"
+                  placeholder="Conte brevemente o que te trouxe até aqui..."></textarea>
+                <span class="field-error"></span>
+              </div>
+              <button type="submit" class="btn btn--primary btn--block">Enviar solicitação</button>
+            </form>
+            <div class="booking-success" id="bookingSuccess">✓ Solicitação enviada! Renata entrará em contato em breve.
+            </div>
+          </aside>
         </div>
-
-        <aside class="booking-card">
-          <h3>Solicitar primeira conversa</h3>
-          <p class="meta" style="margin-bottom:var(--space-sm)">Resposta em até 2 dias úteis.</p>
-          <form id="bookingForm" novalidate>
-            <div class="field">
-              <label for="bookingName">Nome</label>
-              <input type="text" id="bookingName" name="name" placeholder="Seu nome">
-              <span class="field-error"></span>
-            </div>
-            <div class="field">
-              <label for="bookingEmail">E-mail</label>
-              <input type="email" id="bookingEmail" name="email" placeholder="voce@email.com">
-              <span class="field-error"></span>
-            </div>
-            <div class="field">
-              <label for="bookingMessage">Mensagem</label>
-              <textarea id="bookingMessage" name="message" rows="4" placeholder="Conte brevemente o que te trouxe até aqui..."></textarea>
-              <span class="field-error"></span>
-            </div>
-            <button type="submit" class="btn btn--primary btn--block">Enviar solicitação</button>
-          </form>
-          <div class="booking-success" id="bookingSuccess">✓ Solicitação enviada! Renata entrará em contato em breve.</div>
-        </aside>
       </div>
-    </div>
-  </section>
+    </section>
   </main>
 
   <footer class="footer">
@@ -130,7 +136,8 @@
       <div class="footer__grid">
         <div>
           <p class="logo logo--footer">Aurora</p>
-          <p>Educação emocional, comunidade e apoio psicológico acessível — para reconhecer padrões, fortalecer autonomia e recomeçar com segurança.</p>
+          <p>Educação emocional, comunidade e apoio psicológico acessível — para reconhecer padrões, fortalecer
+            autonomia e recomeçar com segurança.</p>
         </div>
         <div>
           <h5>Navegação</h5>
@@ -183,14 +190,15 @@
   <nav class="bottom-nav" aria-label="Navegação mobile">
     <a href="index.html" class="bottom-nav__item"><span class="bn-icon">⌂</span><span>Início</span></a>
     <a href="conteudos.html" class="bottom-nav__item"><span class="bn-icon">📘</span><span>Conteúdos</span></a>
-    <a href="parcerias.html" class="bottom-nav__item is-active"><span class="bn-icon">🤝</span><span>Parcerias</span></a>
+    <a href="parcerias.html" class="bottom-nav__item is-active"><span
+        class="bn-icon">🤝</span><span>Parcerias</span></a>
     <a href="segu.html" class="bottom-nav__item"><span class="bn-icon">🛡</span><span>Segurança</span></a>
   </nav>
 
   <div class="toast" id="toast"></div>
 
-  <script src="js/common.js"></script>
-  <script src="js/perfil.js"></script>
+  <script src="js/Novo.js"></script>
 
 </body>
+
 </html>
