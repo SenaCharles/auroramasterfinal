@@ -1405,7 +1405,7 @@ p {
 .footer p {
   color: rgba(255, 255, 255, 0.55);
   font-size: 0.9rem;
-  max-width: 34ch;
+  /* max-width: 34ch; */
   line-height: 1.7;
   justify-content: center;
   align-items: center;
@@ -1449,6 +1449,10 @@ p {
   align-items: center;
   flex-wrap: wrap;
   gap: var(--space-sm);
+}
+
+.footer-descricao {
+  align-items: center;
 }
 
 /* ============================================================
